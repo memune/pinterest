@@ -10,8 +10,15 @@
         <a href="{% url 'accountapp:login' %}">
             <span>login</span>
         </a>
+        <a href="{% url 'accountapp:create' %}">
+            <span>signup</span>
+        </a>
         {% else %}
-         <a href="{% url 'accountapp:logout' %}">
+        <a href="{% url 'accountapp:detail' pk=user.pk %}">
+            <span>my page</span>
+        </a>
+
+        <a href="{% url 'accountapp:logout' %}">
             <span>logout</span>
         </a>
         {% endif %}
